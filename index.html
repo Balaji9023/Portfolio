@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jayabalaji S — Creative AI & Computer Vision Engineer</title>
+
+  <meta name="description"
+    content="Jayabalaji S — AI & Data Science Engineer building next-generation computer vision pipelines, real-time video analytics, and intelligent conversational software.">
+  <meta name="keywords"
+    content="Jayabalaji S, AI Engineer, Computer Vision, YOLO, OpenCV, NLP, Python, Deep Learning, Machine Learning, Chennai, Portfolio">
+  <meta name="author" content="Jayabalaji S">
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Jayabalaji S — Creative AI & Computer Vision Engineer">
+  <meta property="og:description"
+    content="Explore high-performance computer vision pipelines, NLP applications, and scalable AI systems built by Jayabalaji S.">
+  <meta property="og:image" content="assets/jayabalaji.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       AMBIENT GLOWS & BACKGROUND
+  ========================================= -->
+  <div class="ambient-mesh" aria-hidden="true"></div>
+  <canvas id="bgConstellationCanvas" class="bg-constellation-canvas" aria-hidden="true"></canvas>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================
+       FLOATING ISLAND NAVIGATION DOCK (AWSMD STYLE)
+  ========================================= -->
+  <header class="dock-wrapper">
+    <nav class="nav-dock" id="navDock" aria-label="Main Navigation">
+      <a href="#home" class="dock-logo" aria-label="Jayabalaji S Home">
+        <span class="logo-badge">JS</span>
+        <span class="logo-name">JAYABALAJI S</span>
+      </a>
+
+      <div class="dock-links" id="dockLinks">
+        <a href="#home" class="dock-link active">Home</a>
+        <a href="#about" class="dock-link">About</a>
+        <a href="#work" class="dock-link">Work</a>
+        <a href="#skills" class="dock-link">Arsenal</a>
+        <a href="#experience" class="dock-link">Experience</a>
+        <a href="#contact" class="dock-link">Contact</a>
+      </div>
+
+      <div class="dock-actions">
+        <a href="assets/jayabalaji_resume.pdf" download="Jayabalaji_S_Resume.pdf" target="_blank"
+          class="dock-resume-btn" title="Download Jayabalaji's Resume (PDF)">
+          <span>Resume 📄</span>
+        </a>
+
+        <a href="mailto:balaji9023@gmail.com?subject=Opportunity%20for%20Jayabalaji%20S" class="dock-cta">
+          <span>Let's Talk</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 17l9.2-9.2M17 17V8H8" />
+          </svg>
+        </a>
+
+        <button class="dock-menu-btn" id="dockMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================
+         HERO SECTION: EDITORIAL + SIGNATURE PORTRAIT
+    ========================================= -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+
+        <!-- Hero Left Column: Narrative & Big Typography -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-pulse"></span>
+            <span>AVAILABLE FOR AI ENGINEERING OPPORTUNITIES</span>
+          </div>
+
+          <h1 class="hero-title">
+            Creative <span class="highlight-pill">AI Engineer</span><br>
+            Building intelligent systems that see, understand & act.
+          </h1>
+
+          <p class="hero-lead">
+            AI & Data Science graduate specializing in <strong>real-time computer vision</strong> (YOLOv8, OpenCV),
+            <strong>natural language processing</strong>, and high-performance backend pipelines using FastAPI and
+            Flask.
+            Transforming complex deep learning models into scalable production applications.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              <span>View Selected Work</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+
+            <a href="assets/jayabalaji_resume.pdf" download="Jayabalaji_S_Resume.pdf" target="_blank"
+              class="btn btn-secondary" title="Download Jayabalaji's Resume (PDF)">
+              <span>Download CV 📄</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+
+            <a href="mailto:balaji9023@gmail.com" class="btn btn-ghost">
+              <span>Get In Touch</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17l9.2-9.2M17 17V8H8" />
+              </svg>
+            </a>
+
+            <button class="btn btn-ghost copy-email-btn" data-email="balaji9023@gmail.com" title="Copy Email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Quick Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-pill">
+              <span class="stat-num">45+ FPS</span>
+              <span class="stat-tag">Real-Time Inference</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">96.4%</span>
+              <span class="stat-tag">Detection Precision</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">B.Tech</span>
+              <span class="stat-tag">AI & Data Science (2026)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Awsmd Signature Portrait Card -->
+        <div class="hero-visual" id="heroCardWrapper">
+          <div class="portrait-bento-card" id="heroPortraitCard">
+            <!-- Glow background element -->
+            <div class="card-glow" aria-hidden="true"></div>
+
+            <!-- Image Wrap -->
+            <div class="portrait-frame">
+              <img src="assets/jayabalaji.jpg" alt="Jayabalaji S — AI Engineer" class="portrait-photo" id="portraitImg">
+              <div class="portrait-gradient-overlay" aria-hidden="true"></div>
+
+              <!-- Floating Glass Badge 1: Top Right -->
+              <div class="floating-tag tag-top-right">
+                <span class="tag-icon">⚡</span>
+                <div class="tag-text">
+                  <strong>Computer Vision</strong>
+                  <small>YOLOv8 · OpenCV</small>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 2: Bottom Left -->
+              <div class="floating-tag tag-bottom-left">
+                <span class="status-pulse-sm"></span>
+                <div class="tag-text">
+                  <strong>Chennai, India</strong>
+                  <small>Open to Relocation / Remote</small>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 3: Top Left -->
+              <div class="floating-tag tag-top-left">
+                <span class="tag-icon">🧠</span>
+                <div class="tag-text">
+                  <strong>AI & Data Science</strong>
+                  <small>Deep Learning & NLP</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Bottom Strip -->
+            <div class="card-caption">
+              <div class="caption-user">
+                <h3>Jayabalaji S</h3>
+                <span>AI Engineer & ML Practitioner</span>
+              </div>
+              <a href="#contact" class="caption-action" aria-label="Hire Jayabalaji">
+                <span>Hire</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================
+         INTERACTIVE TERMINAL REPL (COLLAPSIBLE / LIVE)
+    ========================================= -->
+    <section class="terminal-banner-section">
+      <div class="terminal-banner-container">
+        <div class="terminal-bar">
+          <div class="terminal-bar-left">
+            <div class="terminal-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <span class="terminal-title">jayabalaji@ai-core: ~ (interactive repl)</span>
+          </div>
+          <div class="terminal-bar-right">
+            <span class="terminal-hint">Click commands to inspect:</span>
+            <button type="button" class="term-quick-btn" data-cmd="skills">skills</button>
+            <button type="button" class="term-quick-btn" data-cmd="projects">projects</button>
+            <button type="button" class="term-quick-btn" data-cmd="resume">resume</button>
+            <button type="button" class="term-quick-btn" data-cmd="about">about</button>
+            <button type="button" class="term-quick-btn" data-cmd="contact">contact</button>
+            <button type="button" class="term-quick-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+        <div class="terminal-console-body" id="termConsoleBody">
+          <div id="termOutputLines">
+            <p class="term-log"><span class="green">guest@portfolio</span>:<span class="blue">~</span>$ whoami</p>
+            <div class="term-ans">
+              <strong>Jayabalaji S</strong> — AI & Data Science Engineer (B.Tech 2022–2026, Chennai).
+              <br><span class="muted-text">Focus: Real-time Computer Vision (YOLOv8, OpenCV), NLP Transformer Agents,
+                Backend Microservices.</span>
+            </div>
+          </div>
+
+          <form id="termMiniForm" class="term-mini-form">
+            <span class="green">guest@portfolio</span>:<span class="blue">~</span>$&nbsp;
+            <input type="text" id="termInput" autocomplete="off" spellcheck="false"
+              placeholder="Type a command (e.g. skills, projects, contact)...">
+            <span class="term-caret"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         BENTO GRID: ABOUT & ARSENAL (AWSMD SIGNATURE)
+    ========================================= -->
+    <section class="section bento-section" id="about">
+      <div class="section-title-wrap">
+        <span class="section-pill">01 // ABOUT & CAPABILITIES</span>
+        <h2 class="section-heading">Architecting scalable intelligence.</h2>
+      </div>
+
+      <div class="bento-grid">
+        <!-- BENTO CARD 1: PRIMARY BIO (LARGE) -->
+        <div class="bento-card bento-bio">
+          <div class="bento-badge">ENGINEERING PHILOSOPHY</div>
+          <h3>Bridging cutting-edge models with low-latency production software.</h3>
+          <p>
+            I am an Artificial Intelligence & Data Science graduate dedicated to building reliable, high-performance
+            systems.
+            Rather than keeping models inside notebooks, I focus on the full lifecycle: from tensor optimization and
+            custom data pipelines to containerized REST microservices.
+          </p>
+          <p>
+            My hands-on experience covers <strong>real-time video surveillance</strong>, <strong>multi-object
+              tracking</strong>, <strong>conversational agents</strong>, and <strong>automated QA inspection</strong>.
+          </p>
+
+          <div class="bento-tags-row">
+            <span class="tag-pill">Computer Vision</span>
+            <span class="tag-pill">Natural Language Processing</span>
+            <span class="tag-pill">Deep Learning</span>
+            <span class="tag-pill">FastAPI & Flask</span>
+            <span class="tag-pill">Docker & MLOps</span>
+          </div>
+        </div>
+
+        <!-- BENTO CARD 2: METRICS & IMPACT -->
+        <div class="bento-card bento-metrics">
+          <div class="bento-badge">QUANTIFIABLE IMPACT</div>
+          <div class="metric-tiles">
+            <div class="metric-tile">
+              <div class="metric-big">45+</div>
+              <div class="metric-label">FPS Real-Time Vision Tracking</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-big">96.4%</div>
+              <div class="metric-label">mAP on Perimeter Intrusion</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-big">&lt;120ms</div>
+              <div class="metric-label">NLP Assistant Response Latency</div>
+            </div>
+            <div class="metric-tile">
+              <div class="metric-big">2+ Yrs</div>
+              <div class="metric-label">Practical AI & Data Analytics</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENTO CARD 3: ACADEMIC CREDENTIAL -->
+        <div class="bento-card bento-edu">
+          <div class="bento-badge">EDUCATION</div>
+          <div class="edu-header">
+            <h4>B.Tech in Artificial Intelligence & Data Science</h4>
+            <span class="edu-period">2022 — 2026</span>
+          </div>
+          <p class="edu-sub">DMI College of Engineering · Anna University Affiliated · Chennai, India</p>
+          <p class="edu-details">
+            Core Curriculum: Deep Neural Networks, Computer Vision, Natural Language Processing, Machine Learning,
+            Relational Databases, Data Structures & Algorithms.
+          </p>
+        </div>
+
+        <!-- BENTO CARD 4: CORE ARSENAL & TOOLING -->
+        <div class="bento-card bento-stack" id="skills">
+          <div class="bento-badge">TECHNICAL ARSENAL</div>
+          <div class="stack-categories">
+            <div class="stack-cat">
+              <span class="cat-label">AI / VISION</span>
+              <div class="cat-pills">
+                <span>YOLOv8</span>
+                <span>OpenCV</span>
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>DeepSORT</span>
+              </div>
+            </div>
+
+            <div class="stack-cat">
+              <span class="cat-label">NLP & GENAI</span>
+              <div class="cat-pills">
+                <span>Transformers</span>
+                <span>Intent Classification</span>
+                <span>Semantic Search</span>
+                <span>NLTK</span>
+              </div>
+            </div>
+
+            <div class="stack-cat">
+              <span class="cat-label">BACKEND & CLOUD</span>
+              <div class="cat-pills">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Flask</span>
+                <span>Docker</span>
+                <span>REST APIs</span>
+                <span>AWS / GCP</span>
+              </div>
+            </div>
+
+            <div class="stack-cat">
+              <span class="cat-label">DATA & TOOLS</span>
+              <div class="cat-pills">
+                <span>SQL</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Power BI</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         SELECTED CASE STUDIES (EDITORIAL PROJECTS)
+    ========================================= -->
+    <section class="section case-studies-section" id="work">
+      <div class="section-title-wrap">
+        <span class="section-pill">02 // SELECTED CASE STUDIES</span>
+        <h2 class="section-heading">Engineered AI Systems in Production.</h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="case-filters" role="tablist" aria-label="Case Study Filters">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Case Studies
+          (3)</button>
+        <button class="filter-tab" data-filter="vision" role="tab" aria-selected="false">Computer Vision</button>
+        <button class="filter-tab" data-filter="nlp" role="tab" aria-selected="false">NLP & Conversational</button>
+        <button class="filter-tab" data-filter="edge" role="tab" aria-selected="false">Edge AI & Industrial</button>
+      </div>
+
+      <div class="cases-list">
+
+        <!-- CASE STUDY 01 -->
+        <article class="case-card" data-category="vision">
+          <div class="case-info">
+            <div class="case-meta-top">
+              <span class="case-cat-pill">COMPUTER VISION / REAL-TIME</span>
+              <span class="case-year">2026</span>
+            </div>
+
+            <h3 class="case-title">Smart Intrusion & Perimeter Surveillance System</h3>
+
+            <p class="case-desc">
+              High-throughput real-time video surveillance pipeline capable of processing concurrent RTSP CCTV camera
+              feeds.
+              Engineered with custom fine-tuned YOLOv8 models to detect unauthorized boundary breaches and anomaly
+              vectors with sub-85ms alert dispatch.
+            </p>
+
+            <div class="case-metrics-bar">
+              <div class="cm-item">
+                <strong>45+ FPS</strong>
+                <span>Inference Rate</span>
+              </div>
+              <div class="cm-item">
+                <strong>96.4%</strong>
+                <span>Mean Precision (mAP)</span>
+              </div>
+              <div class="cm-item">
+                <strong>&lt; 85ms</strong>
+                <span>Telemetry Latency</span>
+              </div>
+            </div>
+
+            <div class="case-pipeline">
+              <div class="pipeline-label">PIPELINE ARCHITECTURE:</div>
+              <div class="pipeline-flow">
+                <span>RTSP Stream</span> → <span>OpenCV Norm</span> → <span>YOLOv8 Engine</span> → <span>Spatial
+                  Analysis</span> → <span>Flask WebSocket</span>
+              </div>
+            </div>
+
+            <div class="case-tech-pills">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>YOLOv8</span>
+              <span>TensorFlow</span>
+              <span>Flask</span>
+              <span>WebSockets</span>
+            </div>
+
+            <div class="case-actions">
+              <a href="https://github.com/Balaji9023" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>View Repository</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost btn-sm">
+                <span>Request Telemetry Log</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CCTV Visual Mockup -->
+          <div class="case-visual">
+            <div class="cctv-hud">
+              <div class="cctv-bar">
+                <span class="cctv-rec">● LIVE FEED [CAM-04]</span>
+                <span class="cctv-fps" id="cctvFps">48.2 FPS</span>
+              </div>
+
+              <div class="cctv-viewport">
+                <div class="cctv-scan" aria-hidden="true"></div>
+                <div class="cctv-bracket b-tl"></div>
+                <div class="cctv-bracket b-tr"></div>
+                <div class="cctv-bracket b-bl"></div>
+                <div class="cctv-bracket b-br"></div>
+
+                <div class="detection-box">
+                  <div class="det-header">PERSON: 98.4%</div>
+                  <div class="det-sub">B-BOX: 310, 180</div>
+                </div>
+
+                <div class="cctv-footer">
+                  <span class="status-pulse-sm"></span>
+                  <span>PERIMETER SAFE · SECTOR B-07</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE STUDY 02 -->
+        <article class="case-card" data-category="nlp">
+          <div class="case-info">
+            <div class="case-meta-top">
+              <span class="case-cat-pill">NLP & CONVERSATIONAL AGENTS</span>
+              <span class="case-year">2025</span>
+            </div>
+
+            <h3 class="case-title">Serenity Conversational AI & NLP Assistant</h3>
+
+            <p class="case-desc">
+              Context-aware natural language assistant engineered for automated enterprise query processing, multi-turn
+              dialogue management, and intent routing using transformer embeddings and FastAPI.
+            </p>
+
+            <div class="case-metrics-bar">
+              <div class="cm-item">
+                <strong>&lt; 120ms</strong>
+                <span>Response Speed</span>
+              </div>
+              <div class="cm-item">
+                <strong>94.8%</strong>
+                <span>Intent Accuracy</span>
+              </div>
+              <div class="cm-item">
+                <strong>Dual Protocol</strong>
+                <span>REST & WebSocket</span>
+              </div>
+            </div>
+
+            <div class="case-pipeline">
+              <div class="pipeline-label">PIPELINE ARCHITECTURE:</div>
+              <div class="pipeline-flow">
+                <span>User Text</span> → <span>Tokenizer</span> → <span>Transformer Embedding</span> → <span>FastAPI
+                  Router</span> → <span>Stream Output</span>
+              </div>
+            </div>
+
+            <div class="case-tech-pills">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Flask</span>
+              <span>Transformers</span>
+              <span>NLTK</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="case-actions">
+              <a href="https://github.com/Balaji9023" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>View Repository</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+              <button type="button" class="btn btn-ghost btn-sm" id="chatSimulateBtn">
+                <span>Simulate Query</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat Visual Mockup -->
+          <div class="case-visual">
+            <div class="chat-hud">
+              <div class="chat-bar">
+                <span class="status-pulse-sm"></span>
+                <span>SERENITY AGENT // ACTIVE</span>
+              </div>
+
+              <div class="chat-stream" id="chatStream">
+                <div class="msg user-bubble">Run perimeter audit on CAM-04 stream</div>
+                <div class="msg ai-bubble">
+                  <span class="ai-role">SERENITY AI</span>
+                  Perimeter sweep completed. YOLOv8 active at 48.2 FPS. No breaches recorded in Sector B.
+                </div>
+                <div class="msg user-bubble">Generate system latency report</div>
+                <div class="msg ai-bubble">
+                  <span class="ai-role">SERENITY AI</span>
+                  Inference latency is 14ms. Frame transmission healthy. Webhook endpoints synchronized.
+                </div>
+                <div class="typing-pill" id="chatTypingPill">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE STUDY 03 -->
+        <article class="case-card" data-category="edge">
+          <div class="case-info">
+            <div class="case-meta-top">
+              <span class="case-cat-pill">EDGE AI & INDUSTRIAL AUTOMATION</span>
+              <span class="case-year">2025</span>
+            </div>
+
+            <h3 class="case-title">Automated Visual Defect & Anomaly Inspector</h3>
+
+            <p class="case-desc">
+              End-to-end computer vision quality-assurance pipeline designed for high-throughput manufacturing lines.
+              Detects micro-defects, surface irregularities, and mechanical anomalies with real-time pass/fail
+              actuation.
+            </p>
+
+            <div class="case-metrics-bar">
+              <div class="cm-item">
+                <strong>98.1%</strong>
+                <span>Defect Precision</span>
+              </div>
+              <div class="cm-item">
+                <strong>120+ PPM</strong>
+                <span>Parts Per Minute</span>
+              </div>
+              <div class="cm-item">
+                <strong>Dockerized</strong>
+                <span>Edge Container</span>
+              </div>
+            </div>
+
+            <div class="case-pipeline">
+              <div class="pipeline-label">PIPELINE ARCHITECTURE:</div>
+              <div class="pipeline-flow">
+                <span>Frame Trigger</span> → <span>OpenCV Grayscale</span> → <span>CNN Classifier</span> →
+                <span>Heatmap</span> → <span>Actuator</span>
+              </div>
+            </div>
+
+            <div class="case-tech-pills">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>TensorFlow</span>
+              <span>Docker</span>
+              <span>FastAPI</span>
+              <span>NumPy</span>
+            </div>
+
+            <div class="case-actions">
+              <a href="https://github.com/Balaji9023" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>View Repository</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost btn-sm">
+                <span>Request Case Study ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Defect Inspector HUD -->
+          <div class="case-visual">
+            <div class="defect-hud">
+              <div class="defect-bar">
+                <span class="defect-status">● QA SENSOR ONLINE</span>
+                <span>ACCURACY: 98.1%</span>
+              </div>
+
+              <div class="defect-viewport">
+                <div class="defect-target">
+                  <span class="target-tag">ANOMALY_LOC_#14</span>
+                  <span class="target-score">CONFIDENCE: 97.6%</span>
+                </div>
+
+                <div class="defect-footer">
+                  <span>PART #9842: VERIFIED</span>
+                  <span>LATENCY: 12ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =========================================
+         CAREER TIMELINE (EXPERIENCE)
+    ========================================= -->
+    <section class="section timeline-section" id="experience">
+      <div class="section-title-wrap">
+        <span class="section-pill">03 // TRACK RECORD</span>
+        <h2 class="section-heading">Career Experience & Milestones.</h2>
+      </div>
+
+      <div class="timeline-container">
+        <!-- ROLE 1 -->
+        <div class="timeline-entry">
+          <div class="timeline-aside">
+            <span class="time-badge active-time">2026 — PRESENT</span>
+            <span class="time-type">FULL TIME</span>
+          </div>
+
+          <div class="timeline-marker">
+            <span class="marker-dot active-dot"></span>
+          </div>
+
+          <div class="timeline-card">
+            <span class="card-domain">TECHNICAL DELIVERY & CLIENT SOLUTIONS</span>
+            <h3>Business Development Executive</h3>
+            <h4>Sunrise Technologies · Chennai, India</h4>
+            <p>
+              Translate client enterprise requirements into technical specifications, collaborating with software and
+              machine learning engineering teams on architecture scoping, technical feasibility, and client deployment.
+            </p>
+            <div class="card-tags">
+              <span>Solution Architecture</span>
+              <span>Requirements Engineering</span>
+              <span>Cross-Functional Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROLE 2 -->
+        <div class="timeline-entry">
+          <div class="timeline-aside">
+            <span class="time-badge">2025</span>
+            <span class="time-type">ENGINEERING INTERNSHIP</span>
+          </div>
+
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+          </div>
+
+          <div class="timeline-card">
+            <span class="card-domain">AI & MACHINE LEARNING</span>
+            <h3>AI & ML Intern</h3>
+            <h4>MINDFULAI Technologies · Chennai, India</h4>
+            <p>
+              Preprocessed high-dimensional datasets, fine-tuned classification models, and executed rigorous evaluation
+              metrics (Precision, Recall, ROC-AUC). Optimized inference pipelines for computer vision prototyping.
+            </p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Computer Vision</span>
+              <span>Scikit-learn</span>
+              <span>Model Evaluation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROLE 3 -->
+        <div class="timeline-entry">
+          <div class="timeline-aside">
+            <span class="time-badge">2024</span>
+            <span class="time-type">ANALYTICS INTERNSHIP</span>
+          </div>
+
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+          </div>
+
+          <div class="timeline-card">
+            <span class="card-domain">DATA ANALYTICS & BI</span>
+            <h3>Data Analyst Intern</h3>
+            <h4>Vultureline Private Limited · Chennai, India</h4>
+            <p>
+              Built interactive Power BI business intelligence dashboards, automated SQL queries across relational
+              databases, and surfaced quantitative trends to guide executive business strategy.
+            </p>
+            <div class="card-tags">
+              <span>Power BI</span>
+              <span>SQL Queries</span>
+              <span>Excel Analytics</span>
+              <span>Data Cleansing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         BENTO CONTACT HUB (HIGH-CONVERSION)
+    ========================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-bento-grid">
+
+        <!-- Left Bento: Direct Reachout -->
+        <div class="contact-info-card">
+          <span class="section-pill">04 // CONNECT</span>
+          <h2 class="contact-headline">
+            Have an opportunity?<br>
+            <span class="highlight-pill">Let's build together.</span>
+          </h2>
+          <p class="contact-summary">
+            Available for full-time AI Engineering roles, computer vision contract deployments, or machine learning
+            consulting.
+          </p>
+
+          <div class="contact-channels">
+            <!-- Email Card -->
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span>EMAIL DIRECT</span>
+                <a href="mailto:balaji9023@gmail.com" class="channel-link">balaji9023@gmail.com</a>
+              </div>
+              <button class="channel-btn copy-email-btn" data-email="balaji9023@gmail.com" title="Copy Email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="channel-meta">
+                <span>PHONE / WHATSAPP</span>
+                <a href="tel:+919003979386" class="channel-link">+91 90039 79386</a>
+              </div>
+              <a href="https://wa.me/919003979386?text=Hi%20Jayabalaji,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect!"
+                target="_blank" rel="noopener noreferrer" class="channel-badge">
+                Chat ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Link Chips -->
+          <div class="social-chips">
+            <a href="https://github.com/Balaji9023" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jayabalaji-s-ab9569259" target="_blank" rel="noopener noreferrer"
+              class="social-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Bento: Transmission Form -->
+        <div class="contact-form-card">
+          <div class="form-header">
+            <span class="status-pulse-sm"></span>
+            <span>SEND DIRECT MESSAGE</span>
+          </div>
+
+          <form id="awsmdContactForm" class="bento-form">
+            <div class="form-field">
+              <label for="fName">YOUR NAME / ORGANIZATION *</label>
+              <input type="text" id="fName" required placeholder="Alex Rivera (Engineering Lead)">
+            </div>
+
+            <div class="form-field">
+              <label for="fEmail">EMAIL ADDRESS *</label>
+              <input type="email" id="fEmail" required placeholder="name@company.com">
+            </div>
+
+            <div class="form-field">
+              <label for="fRole">OPPORTUNITY TYPE</label>
+              <select id="fRole">
+                <option value="Full-time AI Engineer Role">Full-time AI / CV Engineering Role</option>
+                <option value="Computer Vision System Contract">Computer Vision System Contract</option>
+                <option value="NLP / Conversational Project">Conversational AI / NLP Solution</option>
+                <option value="Technical Consultation">Technical Collaboration / Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="fMessage">PROJECT DETAILS OR MESSAGE *</label>
+              <textarea id="fMessage" rows="4" required
+                placeholder="Tell me about the role, technical requirements, or project vision..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+              <span>Send Message</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17l9.2-9.2M17 17V8H8" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================
+       FOOTER DOCK
+  ========================================= -->
+  <footer class="footer-dock">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="brand-tag">JS // AI ENG</span>
+        <span class="copyright">© 2026 Jayabalaji S · Engineered for the Real World</span>
+      </div>
+
+      <div class="footer-center">
+        <span class="status-pulse-sm"></span>
+        <span>CHENNAI, IN (UTC+5:30)</span>
+      </div>
+
+      <div class="footer-right">
+        <a href="#home" class="btn-top" aria-label="Back to Top">
+          <span>TOP</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================
+       TOAST NOTIFICATION
+  ========================================= -->
+  <div class="toast-card" id="toastCard" role="alert" aria-live="polite">
+    <span class="toast-check">✓</span>
+    <span class="toast-txt" id="toastTxt">Copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
