@@ -4,24 +4,25 @@
    ========================================================================== */
 
 :root {
-  --bg: #060410;
-  --bg-card: rgba(14, 10, 30, 0.75);
-  --bg-card-hover: rgba(20, 14, 42, 0.90);
-  --bg-surface: #0c0820;
-  --border: rgba(200, 160, 255, 0.10);
-  --border-light: rgba(200, 160, 255, 0.18);
-  --border-glow: rgba(192, 132, 252, 0.40);
+  --bg: #080909;
+  --bg-card: rgba(17, 19, 18, 0.88);
+  --bg-card-hover: rgba(26, 29, 27, 0.95);
+  --bg-surface: #111312;
+  --border: rgba(214, 168, 79, 0.18);
+  --border-light: rgba(214, 168, 79, 0.30);
+  --border-glow: rgba(240, 201, 106, 0.50);
 
-  --text: #f5f0ff;
-  --text-muted: #b8a8d8;
-  --text-dim: #7a6a9a;
+  --text: #F5F3ED;
+  --text-muted: #98968F;
+  --text-dim: #6e6c66;
 
-  --accent: #c084fc;
-  --accent-hover: #a855f7;
-  --accent-dim: rgba(192, 132, 252, 0.12);
-  --accent-glow: 0 0 32px rgba(192, 132, 252, 0.32);
-  --rose: #fb7185;
-  --amber: #fb923c;
+  --accent: #D6A84F;
+  --accent-hover: #F0C96A;
+  --accent-dim: rgba(214, 168, 79, 0.14);
+  --accent-glow: 0 0 32px rgba(240, 201, 106, 0.38);
+  --rose: #F0C96A;
+  --amber: #FFE39A;
+  --highlight: #FFE39A;
 
   --font-display: "Plus Jakarta Sans", -apple-system, sans-serif;
   --font-heading: "Space Grotesk", sans-serif;
@@ -98,11 +99,11 @@ img {
   z-index: -3;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(192, 132, 252, 0.04) 1px, transparent 1px),
-    radial-gradient(circle at 15% 15%, rgba(192, 132, 252, 0.14) 0%, transparent 45%),
-    radial-gradient(circle at 85% 25%, rgba(251, 113, 133, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(251, 146, 60, 0.07) 0%, transparent 50%),
-    linear-gradient(135deg, #060410 0%, #0a0618 50%, #080516 100%);
+    radial-gradient(rgba(214, 168, 79, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 15% 15%, rgba(214, 168, 79, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(240, 201, 106, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255, 227, 154, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, #080909 0%, #0d0f0e 50%, #080909 100%);
   background-size: 32px 32px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }
 

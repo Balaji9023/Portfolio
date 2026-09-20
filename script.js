@@ -125,28 +125,27 @@ function initTerminalRepl() {
     help: () => `
       <div class="term-ans">
         <strong class="green">Commands available:</strong><br>
-        • <span class="green">skills</span>: List technical competencies & ML frameworks<br>
-        • <span class="green">projects</span>: View production case studies<br>
-        • <span class="green">about</span>: Candidate bio & background<br>
-        • <span class="green">contact</span>: Coordinates (Email, Phone, WhatsApp, GitHub)<br>
-        • <span class="green">clear</span>: Flush console logs
+        • <span class="green">skills</span>: List technical skills & frameworks<br>
+        • <span class="green">projects</span>: View project experience<br>
+        • <span class="green">about</span>: Candidate summary & background<br>
+        • <span class="green">contact</span>: Direct coordinates (Email, Phone, LinkedIn, GitHub)<br>
+        • <span class="green">clear</span>: Flush console output
       </div>
     `,
     skills: () => `
       <div class="term-ans">
         <strong class="green">Technical Arsenal:</strong><br>
-        [Vision]   YOLOv8, YOLOv5, OpenCV, DeepSORT, TensorFlow, PyTorch<br>
-        [NLP]      Transformers, NLTK, Intent Classification, Semantic Search<br>
-        [Backend]  FastAPI, Flask, Docker, RESTful APIs, WebSockets<br>
-        [Data]     Python, SQL (PostgreSQL), Pandas, NumPy, Power BI
+        [AI & Vision]   OpenCV, YOLO (Ultralytics), TensorFlow, NLP, Object Detection, Real-time Video Processing<br>
+        [Languages]     Python, JavaScript, SQL, Java, C/C++<br>
+        [Backend/Cloud] Flask, FastAPI, REST APIs, Docker, AWS, Google Cloud Platform<br>
+        [Tools]         Git, VS Code
       </div>
     `,
     projects: () => `
       <div class="term-ans">
-        <strong class="green">Production Case Studies:</strong><br>
-        1. <strong>Smart Intrusion Detection</strong> (YOLOv8 + OpenCV, 45+ FPS, &lt;85ms latency)<br>
-        2. <strong>Serenity AI Assistant</strong> (FastAPI + Transformers, &lt;120ms latency)<br>
-        3. <strong>Industrial Visual Defect Pipeline</strong> (Edge CNNs + Docker, 98.1% precision)
+        <strong class="green">Projects:</strong><br>
+        1. <strong>Smart Intrusion Detection System</strong> (Jan 2026 – Apr 2026) | Python, OpenCV, TensorFlow, YOLO, CCTV, Flask<br>
+        2. <strong>Serenity AI Chatbot</strong> (Jun 2025 – Oct 2025) | Python, Flask, REST APIs, JavaScript, Tailwind CSS, NLP
       </div>
     `,
     resume: () => {
@@ -159,14 +158,14 @@ function initTerminalRepl() {
       return `
         <div class="term-ans">
           <strong class="green">✓ Downloading Jayabalaji S Resume (PDF)...</strong><br>
-          <span class="muted-text">File: Jayabalaji_S_Resume.pdf (Verified CV)</span>
+          <span class="muted-text">File: Jayabalaji_S_Resume.pdf</span>
         </div>
       `;
     },
     about: () => `
       <div class="term-ans">
-        <strong>Jayabalaji S</strong> is an AI & Data Science Engineer (B.Tech 2022–2026).<br>
-        Focusing on low-latency Computer Vision, video analytics, and scalable microservices.
+        <strong>Jayabalaji S</strong> — AI & Data Science Graduate (B.Tech 2022–2026, DMI College of Engineering, Chennai).<br>
+        AI & Data Science graduate with hands-on experience building computer vision and NLP applications in Python. Skilled in YOLO, OpenCV, TensorFlow, and Flask.
       </div>
     `,
     contact: () => `
@@ -174,8 +173,8 @@ function initTerminalRepl() {
         <strong>Direct Coordinates:</strong><br>
         Email: <a href="mailto:balaji9023@gmail.com" class="green">balaji9023@gmail.com</a><br>
         Phone: <a href="tel:+919003979386" class="green">+91 90039 79386</a><br>
-        GitHub: <a href="https://github.com/Balaji9023" target="_blank" class="blue">github.com/Balaji9023</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/jayabalaji-s-ab9569259" target="_blank" class="blue">linkedin.com/in/jayabalaji-s-ab9569259</a>
+        LinkedIn: <a href="https://linkedin.com/in/balajis" target="_blank" class="blue">linkedin.com/in/balajis</a><br>
+        GitHub: <a href="https://github.com/Balaji9023" target="_blank" class="blue">github.com/Balaji9023</a>
       </div>
     `,
     clear: () => {
@@ -287,16 +286,16 @@ function initTelemetrySimulations() {
 
   const QUERIES = [
     {
-      q: "Calculate boundary breach vectors for Sector 3",
-      a: "Coordinates calibrated. 1 anomalous path intercepted. Frame buffer synchronized."
+      q: "How are automated responses generated?",
+      a: "Natural Language Processing (NLP) techniques parse input intents, serving responses via Flask REST APIs."
     },
     {
-      q: "Status of transformer model inference pipeline",
-      a: "Weights loaded in GPU cache. Sub-100ms latency sustained across active workers."
+      q: "What technologies power the Serenity AI Chatbot?",
+      a: "Python, Flask REST APIs, JavaScript, Tailwind CSS, and custom NLP pipelines."
     },
     {
-      q: "Run automated health check on camera RTSP streams",
-      a: "All video feeds nominal at 1080p 60Hz. Zero dropped frames detected."
+      q: "Is the chatbot connected to a web interface?",
+      a: "Yes! The trained model is exposed through REST endpoints and connected directly to a browser interface."
     }
   ];
 
@@ -418,12 +417,12 @@ function initConstellationBackground() {
   const particleCount = isMobile ? 50 : 105;
   const maxDistance = isMobile ? 95 : 125;
 
-  // Particle color palette: electric violet, rose-pink, amber, soft violet-white
+  // Particle color palette: Warm Gold (#D6A84F), Champagne Gold (#F0C96A), Soft Highlight (#FFE39A), Warm White (#F5F3ED)
   const COLORS = [
-    { r: 192, g: 132, b: 252 }, // Electric Violet
-    { r: 251, g: 113, b: 133 }, // Rose Pink
-    { r: 168, g: 85, b: 247 },  // Deep Purple
-    { r: 245, g: 240, b: 255 }  // Soft Violet-White
+    { r: 214, g: 168, b: 79 },  // Warm Gold
+    { r: 240, g: 201, b: 106 }, // Champagne Gold
+    { r: 255, g: 227, b: 154 }, // Highlight Gold
+    { r: 245, g: 243, b: 237 }  // Warm White
   ];
 
   class Particle {
@@ -571,7 +570,7 @@ function initConstellationBackground() {
     });
 
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "rgba(192, 132, 252, 0.13)";
+    ctx.strokeStyle = "rgba(214, 168, 79, 0.15)";
     coreEdges.forEach(([i, j]) => {
       ctx.beginPath();
       ctx.moveTo(projectedCore[i].x, projectedCore[i].y);
@@ -582,7 +581,7 @@ function initConstellationBackground() {
     projectedCore.forEach((v) => {
       ctx.beginPath();
       ctx.arc(v.x, v.y, 2.2 * v.scale, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(251, 113, 133, 0.40)";
+      ctx.fillStyle = "rgba(240, 201, 106, 0.45)";
       ctx.fill();
     });
 
@@ -604,7 +603,7 @@ function initConstellationBackground() {
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(192, 132, 252, ${alpha})`;
+          ctx.strokeStyle = `rgba(214, 168, 79, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -620,7 +619,7 @@ function initConstellationBackground() {
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(251, 113, 133, ${mAlpha})`;
+          ctx.strokeStyle = `rgba(255, 227, 154, ${mAlpha})`;
           ctx.lineWidth = 1;
           ctx.stroke();
         }
