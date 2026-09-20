@@ -173,7 +173,7 @@ function initTerminalRepl() {
         <strong>Direct Coordinates:</strong><br>
         Email: <a href="mailto:balaji9023@gmail.com" class="green">balaji9023@gmail.com</a><br>
         Phone: <a href="tel:+919003979386" class="green">+91 90039 79386</a><br>
-        LinkedIn: <a href="https://linkedin.com/in/balajis" target="_blank" class="blue">linkedin.com/in/balajis</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/jayabalaji-s-ab9569259/" target="_blank" class="blue">linkedin.com/in/jayabalaji-s-ab9569259</a><br>
         GitHub: <a href="https://github.com/Balaji9023" target="_blank" class="blue">github.com/Balaji9023</a>
       </div>
     `,
